@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE XenCenterPlugin PUBLIC "-//XENCENTERPLUGIN//DTD XENCENTERPLUGIN1//EN" "xencenter-1.dtd">
+<XenCenterPlugin
+  xmlns="http://www.citrix.com/XenCenter/Plugins/schema"
+  version="1"
+  label="XenCenter Consoles+"
+  description="Consoles, scripts and then some."
+  copyright="2010 Landon Fraley [landonf.com]"
+  link="http://landonf.com/xencenter-consoles-plus"
+  plugin_version="1.0">
+
+  <TabPage
+    name="info-tab"
+    label="XenCenter Consoles+"
+    relative="true"
+    credentials="true"
+    url="Plugins\landonf.com\xencenter-consoles-plus\about_usage.html"
+    xencenter-only="true" />
+  
+  <TabPage
+    name="dvsc-tab"
+    label="DVS Controller"
+    relative="true"
+    credentials="true"
+    url="Plugins\landonf.com\xencenter-consoles-plus\xencenter-consoles-plus.html"
+    search="fdd09814-677c-4655-9c65-c1f6e7020d98" />
+  <Search uuid="fdd09814-677c-4655-9c65-c1f6e7020d98" name="dvsc-vms" major_version="2" minor_version="0" show_expanded="yes">
+    <Query>
+      <QueryScope>
+        <VM />
+      </QueryScope>
+      <GroupQuery type="And">
+        <EnumPropertyQuery property="power_state" equals="yes" query="Running" />
+        <StringListContainsQuery property="tags" contains="yes" query="dvsc" />
+      </GroupQuery>
+    </Query>
+  </Search>
+
+  <TabPage
+    name="nsvpx-tab"
+    label="NetScaler VPX"
+    relative="true"
+    credentials="true"
+    url="Plugins\landonf.com\xencenter-consoles-plus\xencenter-consoles-plus.html"
+    search="fdd09814-677c-4655-9c65-c1f6e7157d98" />
+  <Search uuid="fdd09814-677c-4655-9c65-c1f6e7157d98" name="nsvpx-search" major_version="2" minor_version="0" show_expanded="yes">
+    <Query>
+      <QueryScope>
+        <VM />
+      </QueryScope>
+      <GroupQuery type="And">
+        <EnumPropertyQuery property="power_state" equals="yes" query="Running" />
+        <StringListContainsQuery property="tags" contains="yes" query="nsvpx" />
+      </GroupQuery>
+    </Query>
+  </Search>
+
+  <TabPage
+    name="lic-tab"
+    label="Licensing"
+    relative="true"
+    credentials="true"
+    url="Plugins\landonf.com\xencenter-consoles-plus\xencenter-consoles-plus.html"
+    search="fd888814-677c-4655-9c65-c1f6e7020d98" />
+  <Search uuid="fd888814-677c-4655-9c65-c1f6e7020d98" name="lic-search" major_version="2" minor_version="0" show_expanded="yes">
+    <Query>
+      <QueryScope>
+        <VM />
+      </QueryScope>
+      <GroupQuery type="And">
+        <EnumPropertyQuery property="power_state" equals="yes" query="Running" />
+        <StringListContainsQuery property="tags" contains="yes" query="lic" />
+      </GroupQuery>
+    </Query>
+  </Search>
+
+  <TabPage
+    name="desktopdirector-tab"
+    label="Desktop Director"
+    relative="true"
+    credentials="true"
+    url="Plugins\landonf.com\xencenter-consoles-plus\xencenter-consoles-plus.html"
+    search="fd888814-7890-4655-9c65-c1f6e7020d98" />
+  <Search uuid="fd888814-7890-4655-9c65-c1f6e7020d98" name="desktopdirector-search" major_version="2" minor_version="0" show_expanded="yes">
+    <Query>
+      <QueryScope>
+        <VM />
+      </QueryScope>
+      <GroupQuery type="And">
+        <EnumPropertyQuery property="power_state" equals="yes" query="Running" />
+        <StringListContainsQuery property="tags" contains="yes" query="desktopdirector" />
+      </GroupQuery>
+    </Query>
+  </Search>
+
+  <TabPage
+    name="xcsync-tab"
+    label="Synchronizer"
+    relative="true"
+    credentials="true"
+    url="Plugins\landonf.com\xencenter-consoles-plus\xencenter-consoles-plus.html"
+    search="fd938814-677c-4655-9c65-c1f6e7020d98" />
+  <Search uuid="fd938814-677c-4655-9c65-c1f6e7020d98" name="xcsync-search" major_version="2" minor_version="0" show_expanded="yes">
+    <Query>
+      <QueryScope>
+        <VM />
+      </QueryScope>
+      <GroupQuery type="And">
+        <EnumPropertyQuery property="power_state" equals="yes" query="Running" />
+        <StringListContainsQuery property="tags" contains="yes" query="xcsync" />
+      </GroupQuery>
+    </Query>
+  </Search>
+
+  <TabPage
+    name="agvpx-tab"
+    label="Access Gateway VPX"
+    relative="true"
+    credentials="true"
+    url="Plugins\landonf.com\xencenter-consoles-plus\xencenter-consoles-plus.html"
+    search="fd609814-677c-4655-9c65-c1f6e7020d98" />
+  <Search uuid="fd609814-677c-4655-9c65-c1f6e7020d98" name="agvpx-search" major_version="2" minor_version="0" show_expanded="yes">
+    <Query>
+      <QueryScope>
+        <VM />
+      </QueryScope>
+      <GroupQuery type="And">
+        <EnumPropertyQuery property="power_state" equals="yes" query="Running" />
+        <StringListContainsQuery property="tags" contains="yes" query="agvpx" />
+      </GroupQuery>
+    </Query>
+  </Search>
+
+  <TabPage
+    name="brvpx-tab"
+    label="Repeater VPX"
+    relative="true"
+    credentials="true"
+    url="Plugins\landonf.com\xencenter-consoles-plus\xencenter-consoles-plus.html"
+    search="fd938814-237c-4655-9c65-c1f6e7020d98" />
+  <Search uuid="fd938814-237c-4655-9c65-c1f6e7020d98" name="brvpx-search" major_version="2" minor_version="0" show_expanded="yes">
+    <Query>
+      <QueryScope>
+        <VM />
+      </QueryScope>
+      <GroupQuery type="And">
+        <EnumPropertyQuery property="power_state" equals="yes" query="Running" />
+        <StringListContainsQuery property="tags" contains="yes" query="brvpx" />
+      </GroupQuery>
+    </Query>
+  </Search>
+
+  <TabPage
+    name="merch-tab"
+    label="Merchandising Server"
+    relative="true"
+    credentials="true"
+    url="Plugins\landonf.com\xencenter-consoles-plus\xencenter-consoles-plus.html"
+    search="fd938814-237c-4655-1132-c1f6e7020d98" />
+  <Search uuid="fd938814-237c-4655-1132-c1f6e7020d98" name="merch-search" major_version="2" minor_version="0" show_expanded="yes">
+    <Query>
+      <QueryScope>
+        <VM />
+      </QueryScope>
+      <GroupQuery type="And">
+        <EnumPropertyQuery property="power_state" equals="yes" query="Running" />
+        <StringListContainsQuery property="tags" contains="yes" query="merch" />
+      </GroupQuery>
+    </Query>
+  </Search>
+
+  <TabPage
+    name="es-tab"
+    label="EdgeSight"
+    relative="true"
+    credentials="true"
+    url="Plugins\landonf.com\xencenter-consoles-plus\xencenter-consoles-plus.html"
+    search="ac538814-237c-4655-1132-c1f6e7020d98" />
+  <Search uuid="ac538814-237c-4655-1132-c1f6e7020d98" name="es-search" major_version="2" minor_version="0" show_expanded="yes">
+    <Query>
+      <QueryScope>
+        <VM />
+      </QueryScope>
+      <GroupQuery type="And">
+        <EnumPropertyQuery property="power_state" equals="yes" query="Running" />
+        <StringListContainsQuery property="tags" contains="yes" query="edgesight" />
+      </GroupQuery>
+    </Query>
+  </Search>
+
+  <TabPage
+    name="ntap-tab"
+    label="FilerView"
+    relative="true"
+    credentials="true"
+    url="Plugins\landonf.com\xencenter-consoles-plus\xencenter-consoles-plus.html"
+    search="4f40121b-cc67-4b38-a93b-e72959bf0904" />
+  <Search uuid="4f40121b-cc67-4b38-a93b-e72959bf0904" name="ntap-search" major_version="2" minor_version="0" show_expanded="yes">
+    <Query>
+      <QueryScope>
+        <RemoteSR />
+        <LocalSR />
+      </QueryScope>
+      <GroupQuery type="Or">
+        <EnumPropertyQuery property="sr_type" equals="yes" query="netapp" />
+        <StringListContainsQuery property="tags" contains="yes" query="netapp" />
+      </GroupQuery>
+    </Query>
+  </Search>
+
+  <TabPage
+    name="vyatta-tab"
+    label="Vyatta"
+    relative="true"
+    credentials="true"
+    url="Plugins\landonf.com\xencenter-consoles-plus\xencenter-consoles-plus.html"
+    search="3978021b-cc67-4b38-a93b-e72959bf0904" />
+  <Search uuid="3978021b-cc67-4b38-a93b-e72959bf0904" name="vyatta-search" major_version="2" minor_version="0" show_expanded="yes">
+    <Query>
+      <QueryScope>
+        <VM />
+      </QueryScope>
+      <GroupQuery type="And">
+        <EnumPropertyQuery property="power_state" equals="yes" query="Running" />
+        <StringListContainsQuery property="tags" contains="yes" query="vyatta" />
+      </GroupQuery>
+    </Query>
+  </Search>
+</XenCenterPlugin>

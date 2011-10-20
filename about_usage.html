@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <link type="text/css" href="xencenter-consoles-plus.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <div id="column">
+      <div id="content">
+        <div id="header">
+          <img src="xencenter-consoles-plus-header.png" />
+        </div>
+        <div id="headerBottom">
+        </div>
+        <div id="main">
+          <div id="mainContent">
+            <h1 class="topic">
+              About
+            </h1>
+            <p>
+              Part personal science project, part contribution to the XenServer community, XenCenter Consoles+ is a plugin for
+              Citrix XenServer's management console, XenCenter. For those familiar with the XenCenter Plugins section of the
+              XenServer CDN site, think of XenCenter Consoles+ as a collection of the most handy web consoles and, eventually, the
+              best PowerShell scripts.
+            </p>
+            <strong>Features:</strong>
+            <ul>
+              <li>Currently supported web management consoles:</li>
+              <ul>
+                <li>Citrix Licensing</li>
+                <li>Merchandising Server</li>
+                <li>NetScaler VPX</li>
+                <li>Branch Repeater VPX</li>
+                <li>Access Gateway VPX</li>
+                <li>XenClient VM Synchronizer</li>
+                <li>XenServer Distributed Virtual Switch Controller</li>
+                <li>EdgeSight Server</li>
+                <li>Desktop Director</li>
+                <li>NetApp FilerView</li>
+              </ul>
+              <li>Future Plans include useful PowerShell scripts and more web consoles.</li>
+              <li>Community requests welcome!</li>
+            </ul>
+            <h1 class="topic">
+              Usage
+            </h1>
+            <p>
+              In order to get started using XenCenter Consoles+, you'll need to follow these instructions.
+            </p>
+            <ul>
+              <li>
+                Enabling and disabling XenCenter Consoles+ is done through the <strong>Tools -> Plugins</strong> menu.
+              </li>
+              <li>
+                Turning the web console tab on/off is handled through tags on your VMs.
+                  <div style="padding: 5px;">
+                <table>
+                  <tr>
+                    <td class="bold">
+                      <strong>Web Console</strong>
+                    </td>
+                    <td class="bold">
+                      <strong>Tag</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Access Gateway VPX</td>
+                    <td>agvpx</td>
+                  </tr>
+                  <tr>
+                    <td>Repeater VPX</td>
+                    <td>brvpx</td>
+                  </tr>
+                  <tr>
+                    <td>DVS Controller</td>
+                    <td>dvsc</td>
+                  </tr>
+                  <tr>
+                    <td>EdgeSight</td>
+                    <td>edgesight</td>
+                  </tr>
+                  <tr>
+                    <td>Citrix Licensing</td>
+                    <td>lic</td>
+                  </tr>
+                  <tr>
+                    <td>Merchandising Server</td>
+                    <td>merch</td>
+                  </tr>
+                  <tr>
+                    <td>NetScaler VPX</td>
+                    <td>nsvpx</td>
+                  </tr>
+                  <tr>
+                    <td>XenClient VM Synchronizer</td>
+                    <td>xcsync</td>
+                  </tr>
+                  <tr>
+                    <td>Desktop Director</td>
+                    <td>desktopdirector</td>
+                  </tr>
+                  <tr>
+                    <td>NetApp FilerView</td>
+                    <td>netapp</td>
+                  </tr>
+                  <tr>
+                    <td>Vyatta</td>
+                    <td>vyatta</td>
+                  </tr>
+                </table>
+              </div>
+              </li>
+              <li>
+                After enabling the web console tab you need to create a new custom field called 'xcpURL' and fill it in with the
+                URL to load. This provides support for HTTPS, FQDNs, etc.
+              </li>
+              <p>
+                NOTE: FilerView will also be shown on all Storage Repositories utilizing the Direct NetApp Storage Adapter.
+              </p>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
